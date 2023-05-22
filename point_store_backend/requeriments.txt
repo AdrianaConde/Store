@@ -1,0 +1,4 @@
+pyramid
+SQLAlchemy
+python-dotenv
+psycopg2
