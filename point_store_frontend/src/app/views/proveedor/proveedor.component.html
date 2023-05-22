@@ -1,0 +1,10 @@
+<div class="grid grid-cols-5 p-10">
+    <div class="col-span-2">
+        <app-product [id]="proveedor.id" (success)="onSaveNewProduct($event)"></app-product>
+    </div>
+    <div class="grid grid-cols-3 col-span-3">
+        <div *ngFor="let p of productCards" class="m-4 h-72">
+            <app-card [product]="p"></app-card>
+        </div>
+    </div>
+</div>

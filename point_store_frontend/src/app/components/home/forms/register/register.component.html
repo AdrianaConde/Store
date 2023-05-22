@@ -1,0 +1,39 @@
+<div>
+    <div>
+        <h1 class="text-xl m-4 uppercase font-bold text-center"> Formulario para registro de {{getTypeRegister()}}
+        </h1>
+    </div>
+    <div class="p-2">
+        <form [formGroup]="formRegister" class="space-y-8" (submit)="onSubmit()">
+            <div class="flex flex-col w-">
+                <label class="text-lg">Ingrese el nombre del {{getTypeRegister()}}:</label>
+                <input formControlName="name" class="p-3 w-full rounded-lg" required type="text"
+                    placeholder="Ingresa el nombre del {{getTypeRegister()}}">
+            </div>
+            <div *ngIf="typeRegister==='cliente'" class="flex flex-col w-">
+                <label class="text-lg">Ingrese el apellido del cliente</label>
+                <input formControlName="last_name" class="p-3 w-full rounded-lg" type="text"
+                    placeholder="Ingrese el apellido del cliente">
+            </div>
+            <div class="flex flex-col w-">
+                <label class="text-lg">Ingrese la cedula del {{getTypeRegister()}}:</label>
+                <input formControlName="cedula" class="p-3 w-full rounded-lg" required type="text"
+                    placeholder="Ingresa el cedula del {{getTypeRegister()}}">
+            </div>
+
+            <div class="flex flex-col w-">
+                <label class="text-lg">Ingrese la direccion del {{getTypeRegister()}}</label>
+                <input formControlName="address" class="p-3 w-full rounded-lg" type="text"
+                    placeholder="Ingrese la direccion del {{getTypeRegister()}}">
+            </div>
+
+            <div class="flex flex-col w-">
+                <label class="text-lg">Ingrese el telefono del {{getTypeRegister()}}</label>
+                <input formControlName="telephone" class="p-3 w-full rounded-lg" type="text"
+                    placeholder="Ingrese el telefono del {{getTypeRegister()}}">
+            </div>
+
+            <button class="btn bg-slate-500 p-4 w-full rounded-lg hover:bg-slate-300">Registrar</button>
+        </form>
+    </div>
+</div>

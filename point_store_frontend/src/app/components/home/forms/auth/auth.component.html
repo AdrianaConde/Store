@@ -1,0 +1,21 @@
+<div>
+    <div>
+        <h1 class="text-xl m-4 uppercase font-bold text-center"> Formulario para registro de Ingreso a sistema
+        </h1>
+    </div>
+    <div class="p-2">
+        <form [formGroup]="form" class="space-y-8" (submit)="onSubmit()">
+            <div class="flex flex-col w-">
+                <label class="text-lg">Ingrese la cedula del consumidor</label>
+                <input formControlName="cedula" class="p-3 w-full rounded-lg" type="text"
+                    placeholder="Ingrese la cedula del consumidor">
+            </div>
+            <button class="btn bg-slate-500 p-4 w-full rounded-lg hover:bg-slate-300">Ingresar</button>
+            <!-- <div *ngIf="successStatus!=='success' && successStatus!==''"
+                class="w-full text-center p-3 rounded-lg bg-red-200">
+                x error al crear -->
+            <!-- </div> -->
+
+        </form>
+    </div>
+</div>
