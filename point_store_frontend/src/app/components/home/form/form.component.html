@@ -1,0 +1,32 @@
+<div>
+    <div *ngIf="isAuth">
+        <app-auth></app-auth>
+
+        <div class="grid grid-cols-2">
+            <div (click)="updateAuth(false, 'cliente')"
+                class="underline decoration-indigo-500  hover:text-sky-400 cursor-pointer">
+                Registrar Cliente
+            </div>
+            <div (click)="updateAuth(false, 'proveedor')"
+                class="underline decoration-indigo-500  hover:text-sky-400 cursor-pointer">
+                Registrar Proveedor
+            </div>
+        </div>
+        <div *ngIf="successStatus==='success'" class="w-full text-center p-3 rounded-lg bg-green-200">
+            ✓ creada exitosamente
+        </div>
+        <div *ngIf="successStatus!=='success' && successStatus!==''"
+            class="w-full text-center p-3 rounded-lg bg-red-200">
+            x error al crear
+        </div>
+    </div>
+    <div *ngIf="!isAuth">
+        <app-register [typeRegister]="type" (success)="successSave($event)"></app-register>
+        <div class="grid grid-cols-2">
+            <div (click)="updateAuth(true, '')"
+                class="underline decoration-indigo-500  hover:text-sky-400 cursor-pointer">
+                Ingresara al sistema
+            </div>
+        </div>
+    </div>
+</div>

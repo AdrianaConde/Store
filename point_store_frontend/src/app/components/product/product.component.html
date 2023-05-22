@@ -1,0 +1,29 @@
+<div class="border-2 border-slate-500 p-5 items-center rounded-lg">
+    <form [formGroup]="registerProduct" class="space-y-8" (submit)="onSubmit()">
+        <div class="flex flex-col w-">
+            <label class="text-lg">Ingrese el nombre del producto:</label>
+            <input formControlName="name" class="p-3 w-full rounded-lg" required type="text"
+                placeholder="Ingresa el nombre del  ">
+        </div>
+
+        <div class="flex flex-col w-">
+            <label class="text-lg">Ingrese la descripcion del producto :</label>
+            <textarea formControlName="descripcion" class="p-3 w-full rounded-lg" required type="textarea"
+                placeholder="Ingresa el cedula del " rows="10"></textarea>
+        </div>
+
+        <div class="flex flex-col w-">
+            <label class="text-lg">Ingrese el Precio del producto </label>
+            <input formControlName="price" class="p-3 w-full rounded-lg" type="text"
+                placeholder="Ingrese la direccion del ">
+        </div>
+
+        <div class="flex flex-col w-">
+            <label class="text-lg">Ingrese la cantida del producto: </label>
+            <input formControlName="amount" class="p-3 w-full rounded-lg" type="text"
+                placeholder="Ingrese el telefono del  ">
+        </div>
+
+        <button class="btn bg-slate-500 p-4 w-full rounded-lg hover:bg-slate-300">Registrar</button>
+    </form>
+</div>
